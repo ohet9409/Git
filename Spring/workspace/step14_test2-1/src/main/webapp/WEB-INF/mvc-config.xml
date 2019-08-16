@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Uncomment and your base-package here:
+         <context:component-scan
+            base-package="org.springframework.samples.web"/>  -->
+
+
+    <mvc:annotation-driven />
+
+
+	<mvc:resources location="/script/" mapping="/script/**"/>
+	<bean id="ScoreWriteFormController" class="score.controller.ScoreWriteFormController"/>
+	<bean id="ScoreWriteController" class="score.controller.ScoreWriteController"/>
+	<bean id="ScoreListController" class="score.controller.ScoreListController"/>
+	<bean id="ScoreViewController" class="score.controller.ScoreViewController"/>
+	<bean id="ScoreModifyFormController" class="score.controller.ScoreModifyFormController"/>
+	<bean id="ScoreModifyController" class="score.controller.ScoreModifyController"/>
+	<bean id="ScoreDeleteController" class="score.controller.ScoreDeleteController"/>
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/score/scoreWriteForm.do">ScoreWriteFormController</prop>
+				<prop key="/score/scoreWrite.do">ScoreWriteController</prop>
+				<prop key="/score/scoreList.do">ScoreListController</prop>
+				<prop key="/score/scoreView.do">ScoreViewController</prop>
+				<prop key="/score/scoreModifyForm.do">ScoreModifyFormController</prop>
+				<prop key="/score/scoreModify.do">ScoreModifyController</prop>
+				<prop key="/score/scoreDelete.do">ScoreDeleteController</prop>
+			</props>
+		</property>
+	
+	</bean>
+
+</beans>

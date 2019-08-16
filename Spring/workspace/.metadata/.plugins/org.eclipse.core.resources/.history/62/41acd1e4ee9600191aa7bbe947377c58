@@ -1,0 +1,43 @@
+package guest.controller;
+
+import java.io.UnsupportedEncodingException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import guest.bean.GuestDTO;
+import guest.dao.GuestDAO;
+@Controller
+public class List {
+	@RequestMapping(value="/guest/write.do")
+	public ModelAndView write(HttpServletRequest request) {
+		try {
+			request.setCharacterEncoding("utf-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int num = Integer.parseInt(request.getParameter("num"));
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String subject = request.getParameter("subject");
+		String content = request.getParameter("content");
+		GuestDTO dto = new GuestDTO();
+		dto.setContent(content);
+		dto.setEmail(email);
+		dto.setName(name);
+		dto.setNum(num);
+		dto.setSubject(subject);
+		GuestDAO dao = new GuestDAO();
+		int su = dao.input(dto);
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("su", su);
+		modelAndView.addObject("display", "../guest/write.jsp");
+		modelAndView.setViewName("/main/index.jsp");
+		return modelAndView;
+		
+	}
+}

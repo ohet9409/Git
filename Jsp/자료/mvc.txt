@@ -1,0 +1,113 @@
+*MVC
+1. Model
+   => 데이터 처리
+   => Java
+2. View
+   => HTML 문서 작성
+   => JSP
+3. Controller
+   => Model + view 관리
+   => servlet
+   => Model : if-else 또는 Map 클래스
+   => view : forward 방식으로 화면이동
+
+http://localhost:8080/18-mvc/MessageController?message=host
+				파일 요청?데이터
+주소?데이터
+=> ${param.데이터}
+request.setAttribute("데이터명",데이터);
+=> ${데이터명}
+
+* MVC 패턴에서 데이터 처리 클래스의 역할
+1. 데이터 처리
+2. 데이터 공유
+3. 처리된 결과를 보여줄 jsp 파일 선택
+
+<의존성>
+=> 코드를 수정할 때 클래스 파일을 얼만큼 건드리는 지를 나타냄
+
+* MVC 패턴에서 데이터 처리 방법
+1. if-esle 방법: 의존성이 높다
+2. Map 클래스 방법 : 의존성이 낮아짐
+put으로 저장, get으로 출력
+
+* 클라이언트에서 서버로 요청 정보를 보낼 때
+1. http://localhost:8080/test.jsp
+2. http://localhost:8080/test.do
+
+* 답글
+원글_그룹번호(board_num) = 원글_글번호
+답글_그룹번호(board_re_ref) = 원글_그룹번호
+
+원글_단계(board_re_lev) = 0
+답글_단계(board_re_lev) = 원글_단계 + 1
+
+원글_글순서(board_re_seq) = 0
+답글_글순서(board_re_seq) = 원글_글순서 + 1
+
+* 답글 동작 흐름
+1. "과일"추가 (원글)
+	board_num	board_subject	board_re_ref	board_re_lev	board_re_seq
+	10		과일		10		0		0
+
+2. "야채"추가 (원글)
+	board_num	board_subject	board_re_ref	board_re_lev	board_re_seq
+	10		과일		10		0		0
+	11		야채		11		0		0
+
+3. "사과"추가 (과일답글)
+	board_num	board_subject	board_re_ref	board_re_lev	board_re_seq
+원글	10		과일		10		0		0
+원글	11		야채		11		0		0
+과일답글	12		사과		10		1		1
+
+4. "오이"저장 (야채답글)
+	board_num	board_subject	board_re_ref	board_re_lev	board_re_seq
+원글	10		과일		10		0		0
+원글	11		야채		11		0		0
+과일답글	12		사과		10		1		1
+야채답글	13		오이		11		1		1
+
+5. "빨강사과" 추가(사과답글)
+	board_num	board_subject	board_re_ref	board_re_lev	board_re_seq
+원글	10		과일		10		0		0
+원글	11		야채		11		0		0
+과일답글	12		사과		10		1		1
+야채답글	13		오이		11		1		1
+사과답글	14		빨강사과		10		2		2		
+
+6. "파랑사과" 추가(사과답글)
+=> "파랑사과"는 "빨강사과" 앞에 위치해야 하므로, re_seq로 순서를 정한다.
+=> 원글 re_seq보다 큰 답글 re_seq에 1증가한 값을 가진다.
+     추가된 답글의 re_seq는 원글 re_seq에 1증가한 값을 가진다.
+     추가된 답글의 re_lev는 원글 re_lev에 1증가한 값을 가진다.
+=> 그래서 원글인 "사과"의 re_seq보다 큰 "빨강사과"의 re_seq가 1증가하고,
+     "파랑사과"는 원글인 "사과"의 re_seq에 1증가한 값을 가진다.
+	board_num	board_subject	board_re_ref	board_re_lev	board_re_seq
+원글	10		과일		10		0		0 0
+원글	11		야채		11		0		0 0
+과일답글	12		사과		10		1		1 1
+야채답글	13		오이		11		1		1 1
+사과답글	14		빨강사과		10		2		2 3
+사과답글	15		파랑사과		10		2		   2
+
+7. "배" 추가 (과일답글)
+	board_num	board_subject	board_re_ref	board_re_lev	board_re_seq
+원글	10		과일		10		0		0 0 0
+원글	11		야채		11		0		0 0 0
+과일답글	12		사과		10		1		1 1 2
+야채답글	13		오이		11		1		1 1 1
+사과답글	14		빨강사과		10		2		2 3 4
+사과답글	15		파랑사과		10		2		   2 3
+과일답글	16		배		10		1		      1
+
+* 출력 모양		그룹		들여쓰기		최신글이 맨앞으로
+			board_re_ref	board_re_lev	board_re_seq
+야채			11		0		0
+ ---> 오이		11		1		1
+
+과일			10		0		0
+  --> 배			10		1		1
+  --> 사과		10		1		2
+  --> 파랑사과		10		2		3
+  --> 빨강사과		10		2		4

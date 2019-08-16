@@ -1,0 +1,117 @@
+[2019-05-09 16:01:59.178] [sharedprocess] [info] main {"machineId":"60acafc45751950db9681b7233632866766ca320bca7c527288ee0253710733b"}
+[2019-05-09 16:01:59.216] [sharedprocess] [info] Scanned user extensions: 0
+[2019-05-09 16:01:59.232] [sharedprocess] [info] Scanned user extensions: 0
+[2019-05-09 16:01:59.234] [sharedprocess] [info] Scanned user extensions: 0
+[2019-05-09 16:01:59.360] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:01:59.363] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:01:59.366] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:01:59.568] [sharedprocess] [info] Scanned user extensions: 0
+[2019-05-09 16:01:59.582] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:01:59.666] [sharedprocess] [info] Scanned user extensions: 0
+[2019-05-09 16:01:59.689] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:00.624] [sharedprocess] [info] Scanned user extensions: 0
+[2019-05-09 16:02:00.624] [sharedprocess] [info] Installing the extension: codemix.web
+[2019-05-09 16:02:00.687] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.codemix.web-0.9.4: codemix.web
+[2019-05-09 16:02:00.689] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\codemix.web-0.9.4
+[2019-05-09 16:02:00.945] [sharedprocess] [info] Installation completed. codemix.web
+[2019-05-09 16:02:00.946] [sharedprocess] [info] Successfully installed the extension: codemix.web
+[2019-05-09 16:02:01.029] [sharedprocess] [info] Scanned user extensions: 1
+[2019-05-09 16:02:01.156] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:01.235] [sharedprocess] [info] Scanned user extensions: 1
+[2019-05-09 16:02:01.619] [sharedprocess] [info] Scanned user extensions: 1
+[2019-05-09 16:02:02.037] [sharedprocess] [info] Scanned user extensions: 1
+[2019-05-09 16:02:02.037] [sharedprocess] [info] Installing the extension: christian-kohler.path-intellisense
+[2019-05-09 16:02:02.133] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.christian-kohler.path-intellisense-1.4.2: christian-kohler.path-intellisense
+[2019-05-09 16:02:02.134] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\christian-kohler.path-intellisense-1.4.2
+[2019-05-09 16:02:02.136] [sharedprocess] [info] Installation completed. christian-kohler.path-intellisense
+[2019-05-09 16:02:02.137] [sharedprocess] [info] Successfully installed the extension: christian-kohler.path-intellisense
+[2019-05-09 16:02:02.144] [sharedprocess] [info] Scanned user extensions: 2
+[2019-05-09 16:02:02.183] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:02.205] [sharedprocess] [info] Scanned user extensions: 2
+[2019-05-09 16:02:02.778] [sharedprocess] [info] Scanned user extensions: 2
+[2019-05-09 16:02:02.778] [sharedprocess] [info] Installing the extension: formulahendry.code-runner
+[2019-05-09 16:02:04.803] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.formulahendry.code-runner-0.9.7: formulahendry.code-runner
+[2019-05-09 16:02:04.805] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\formulahendry.code-runner-0.9.7
+[2019-05-09 16:02:04.807] [sharedprocess] [info] Installation completed. formulahendry.code-runner
+[2019-05-09 16:02:04.807] [sharedprocess] [info] Successfully installed the extension: formulahendry.code-runner
+[2019-05-09 16:02:04.834] [sharedprocess] [info] Scanned user extensions: 3
+[2019-05-09 16:02:04.862] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:04.885] [sharedprocess] [info] Scanned user extensions: 3
+[2019-05-09 16:02:04.904] [sharedprocess] [info] Scanned user extensions: 3
+[2019-05-09 16:02:04.904] [sharedprocess] [info] Installing the extension: msjsdiag.debugger-for-chrome
+[2019-05-09 16:02:06.075] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.msjsdiag.debugger-for-chrome-4.11.3: msjsdiag.debugger-for-chrome
+[2019-05-09 16:02:06.077] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\msjsdiag.debugger-for-chrome-4.11.3
+[2019-05-09 16:02:06.079] [sharedprocess] [info] Installation completed. msjsdiag.debugger-for-chrome
+[2019-05-09 16:02:06.080] [sharedprocess] [info] Successfully installed the extension: msjsdiag.debugger-for-chrome
+[2019-05-09 16:02:06.088] [sharedprocess] [info] Scanned user extensions: 4
+[2019-05-09 16:02:06.112] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:06.131] [sharedprocess] [info] Scanned user extensions: 4
+[2019-05-09 16:02:06.138] [sharedprocess] [info] Scanned user extensions: 4
+[2019-05-09 16:02:06.138] [sharedprocess] [info] Installing the extension: dbaeumer.vscode-eslint
+[2019-05-09 16:02:06.166] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.dbaeumer.vscode-eslint-1.8.2: dbaeumer.vscode-eslint
+[2019-05-09 16:02:06.168] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\dbaeumer.vscode-eslint-1.8.2
+[2019-05-09 16:02:06.169] [sharedprocess] [info] Installation completed. dbaeumer.vscode-eslint
+[2019-05-09 16:02:06.170] [sharedprocess] [info] Successfully installed the extension: dbaeumer.vscode-eslint
+[2019-05-09 16:02:06.188] [sharedprocess] [info] Scanned user extensions: 5
+[2019-05-09 16:02:06.255] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:06.276] [sharedprocess] [info] Scanned user extensions: 5
+[2019-05-09 16:02:06.298] [sharedprocess] [info] Scanned user extensions: 5
+[2019-05-09 16:02:06.298] [sharedprocess] [info] Installing the extension: formulahendry.auto-close-tag
+[2019-05-09 16:02:06.348] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.formulahendry.auto-close-tag-0.5.6: formulahendry.auto-close-tag
+[2019-05-09 16:02:06.350] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\formulahendry.auto-close-tag-0.5.6
+[2019-05-09 16:02:06.351] [sharedprocess] [info] Installation completed. formulahendry.auto-close-tag
+[2019-05-09 16:02:06.352] [sharedprocess] [info] Successfully installed the extension: formulahendry.auto-close-tag
+[2019-05-09 16:02:06.389] [sharedprocess] [info] Scanned user extensions: 6
+[2019-05-09 16:02:06.436] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:06.456] [sharedprocess] [info] Scanned user extensions: 6
+[2019-05-09 16:02:06.806] [sharedprocess] [info] Scanned user extensions: 6
+[2019-05-09 16:02:06.806] [sharedprocess] [info] Installing the extension: mkaufman.htmlhint
+[2019-05-09 16:02:11.997] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.mkaufman.htmlhint-0.6.0: mkaufman.htmlhint
+[2019-05-09 16:02:12.000] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\mkaufman.htmlhint-0.6.0
+[2019-05-09 16:02:12.001] [sharedprocess] [info] Installation completed. mkaufman.htmlhint
+[2019-05-09 16:02:12.001] [sharedprocess] [info] Successfully installed the extension: mkaufman.htmlhint
+[2019-05-09 16:02:12.017] [sharedprocess] [info] Scanned user extensions: 7
+[2019-05-09 16:02:12.045] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:12.068] [sharedprocess] [info] Scanned user extensions: 7
+[2019-05-09 16:02:12.078] [sharedprocess] [info] Scanned user extensions: 7
+[2019-05-09 16:02:12.078] [sharedprocess] [info] Installing the extension: xabikos.javascriptsnippets
+[2019-05-09 16:02:12.092] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.xabikos.javascriptsnippets-1.7.2: xabikos.javascriptsnippets
+[2019-05-09 16:02:12.093] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\xabikos.javascriptsnippets-1.7.2
+[2019-05-09 16:02:12.098] [sharedprocess] [info] Installation completed. xabikos.javascriptsnippets
+[2019-05-09 16:02:12.098] [sharedprocess] [info] Successfully installed the extension: xabikos.javascriptsnippets
+[2019-05-09 16:02:12.115] [sharedprocess] [info] Scanned user extensions: 8
+[2019-05-09 16:02:12.120] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:12.138] [sharedprocess] [info] Scanned user extensions: 8
+[2019-05-09 16:02:12.144] [sharedprocess] [info] Scanned user extensions: 8
+[2019-05-09 16:02:12.144] [sharedprocess] [info] Installing the extension: formulahendry.auto-rename-tag
+[2019-05-09 16:02:12.165] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.formulahendry.auto-rename-tag-0.0.15: formulahendry.auto-rename-tag
+[2019-05-09 16:02:12.167] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\formulahendry.auto-rename-tag-0.0.15
+[2019-05-09 16:02:12.168] [sharedprocess] [info] Installation completed. formulahendry.auto-rename-tag
+[2019-05-09 16:02:12.168] [sharedprocess] [info] Successfully installed the extension: formulahendry.auto-rename-tag
+[2019-05-09 16:02:12.184] [sharedprocess] [info] Scanned user extensions: 9
+[2019-05-09 16:02:12.207] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:12.251] [sharedprocess] [info] Scanned user extensions: 9
+[2019-05-09 16:02:12.257] [sharedprocess] [info] Scanned user extensions: 9
+[2019-05-09 16:02:12.257] [sharedprocess] [info] Installing the extension: bradgashler.htmltagwrap
+[2019-05-09 16:02:12.320] [sharedprocess] [info] Extracted extension to C:\Users\ezen\.codemix\extensions\.bradgashler.htmltagwrap-0.0.7: bradgashler.htmltagwrap
+[2019-05-09 16:02:12.322] [sharedprocess] [info] Renamed to C:\Users\ezen\.codemix\extensions\bradgashler.htmltagwrap-0.0.7
+[2019-05-09 16:02:12.323] [sharedprocess] [info] Installation completed. bradgashler.htmltagwrap
+[2019-05-09 16:02:12.323] [sharedprocess] [info] Successfully installed the extension: bradgashler.htmltagwrap
+[2019-05-09 16:02:12.342] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:02:12.378] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:12.399] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:02:16.441] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:02:16.443] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:02:16.444] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:02:16.495] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:16.497] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:16.503] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:16.816] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:02:16.827] [sharedprocess] [info] Scanned system extensions: 73
+[2019-05-09 16:02:18.830] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:02:39.190] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-05-09 16:07:18.839] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:12:18.850] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:17:18.872] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:22:18.895] [sharedprocess] [info] Scanned user extensions: 10
+[2019-05-09 16:27:18.946] [sharedprocess] [info] Scanned user extensions: 10

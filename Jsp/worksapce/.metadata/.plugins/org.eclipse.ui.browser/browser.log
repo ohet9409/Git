@@ -1,0 +1,26 @@
+
+5월 01, 2019 16:50:50.34 NEW SESSION
+5월 01, 2019 16:50:50.34 [636:2888:0501/165050.339:ERROR:browser_process_sub_thread.cc(217)] Waited 22 ms for network service
+5월 01, 2019 17:33:43.42 [12260:4452:0501/173343.428:ERROR:browser_process_sub_thread.cc(217)] Waited 10 ms for network service
+5월 01, 2019 17:40:29.11 [9920:7068:0501/174029.116:ERROR:browser_process_sub_thread.cc(217)] Waited 27 ms for network service
+5월 01, 2019 17:53:06.67 [8052:3268:0501/175306.675:ERROR:browser_process_sub_thread.cc(217)] Waited 17 ms for network service
+
+5월 02, 2019 10:14:10.40 NEW SESSION
+5월 02, 2019 10:14:10.40 [3268:4376:0502/101410.407:ERROR:browser_process_sub_thread.cc(217)] Waited 20 ms for network service
+5월 02, 2019 12:15:03.64 [5856:11884:0502/121503.649:ERROR:browser_process_sub_thread.cc(217)] Waited 23 ms for network service
+5월 02, 2019 12:55:45.12 [13040:9672:0502/125545.122:ERROR:browser_process_sub_thread.cc(217)] Waited 10 ms for network service
+5월 02, 2019 13:01:32.92 [12068:13124:0502/130132.925:ERROR:browser_process_sub_thread.cc(217)] Waited 26 ms for network service
+5월 02, 2019 13:01:39.36 [10156:8876:0502/130139.360:ERROR:browser_process_sub_thread.cc(217)] Waited 30 ms for network service
+5월 02, 2019 13:07:07.58 [5516:1828:0502/130707.581:ERROR:browser_process_sub_thread.cc(217)] Waited 14 ms for network service
+5월 02, 2019 13:08:59.26 [7300:2516:0502/130859.264:ERROR:browser_process_sub_thread.cc(217)] Waited 27 ms for network service
+5월 02, 2019 13:10:36.79 [5832:2336:0502/131036.798:ERROR:browser_process_sub_thread.cc(217)] Waited 9 ms for network service
+5월 02, 2019 14:09:12.34 [2936:11572:0502/140912.349:ERROR:browser_process_sub_thread.cc(217)] Waited 27 ms for network service
+
+5월 03, 2019 11:57:54.45 NEW SESSION
+5월 03, 2019 11:57:54.45 [4944:300:0503/115754.426:ERROR:browser_process_sub_thread.cc(217)] Waited 29 ms for network service
+5월 03, 2019 11:58:01.42 [6884:11496:0503/115801.428:ERROR:browser_process_sub_thread.cc(217)] Waited 26 ms for network service
+5월 03, 2019 12:10:21.96 [4904:1464:0503/121021.967:ERROR:browser_process_sub_thread.cc(217)] Waited 11 ms for network service
+5월 03, 2019 17:04:06.63 [896:11336:0503/170406.631:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+5월 03, 2019 17:05:01.31 [896:11336:0503/170501.315:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+5월 03, 2019 17:53:47.26 [896:11336:0503/175347.262:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+5월 03, 2019 17:54:09.49 [896:11336:0503/175409.492:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 

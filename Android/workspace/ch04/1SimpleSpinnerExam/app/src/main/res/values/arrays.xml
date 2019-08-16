@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 문자열 배열 데이터 정의 -->
+    <string-array name="spinner_data">
+        <item>-- 선택하세요 --</item>
+        <item>안드로이드 폰</item>
+        <item>아이폰</item>
+        <item>삼성노트10</item>
+        <item>LG v50</item>
+    </string-array>
+
+</resources>

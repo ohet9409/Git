@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringBoard2/target/m2e-wtp/web-resources/META-INF/maven/org.springframework.samples.service.service/step18&apos; to &apos;SpringBoard2&apos;" description="Rename resource &apos;step18&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="target/m2e-wtp/web-resources/META-INF/maven/org.springframework.samples.service.service/step18" name="SpringBoard2" stamp="1561441565670" updateReferences="true"/>
+</session>

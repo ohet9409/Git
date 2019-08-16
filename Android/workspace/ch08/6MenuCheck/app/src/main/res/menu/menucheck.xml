@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/subMenu"
+        android:title="Sub Menu">
+        <menu >
+            <group
+                android:id="@+id/checkable_group"
+                android:checkableBehavior="all">
+                <item
+                    android:id="@+id/bigFont"
+                    android:title="Big Font" />
+            </group>
+            <group
+                android:id="@+id/checkable_group2"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/red"
+                    android:checked="true"
+                    android:title="Red" />
+                <item
+                    android:id="@+id/green"
+                    android:title="Green" />
+                <item
+                    android:id="@+id/blue"
+                    android:title="Blue" />
+            </group>
+        </menu>
+    </item>
+</menu>

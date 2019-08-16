@@ -1,0 +1,34 @@
+@charset "UTF-8";
+* {
+	padding: 0px;
+	margin: 0px;
+}
+.wrap{
+	margin: auto;
+	width: 800px;
+	height: 800px ;
+	border: solid;
+}
+td {	
+	padding: 5px;
+	width: 21.5%;
+}
+.menu{
+	
+	background-color: skyblue;
+	padding-right: 0px;
+}
+nav {
+	padding-top: 15px; 
+	padding-left: 15px;
+	
+}
+header {
+	
+	margin: 0;
+	padding: 0;
+}
+#id, #pwd{
+	margin-bottom: 5px;
+	
+}

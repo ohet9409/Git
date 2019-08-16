@@ -1,0 +1,32 @@
+create TABLE guestbook(
+    num NUMBER,
+    name VARCHAR2(30) not null,
+    email VARCHAR2(50),
+    subject VARCHAR2(255) not null,
+    content VARCHAR2(4000) not null,
+    logtime date
+);
+-- 시퀀스 객체 생성
+create sequence guest_num nocycle nocache;
+
+-- 시퀀스 객체 삭제
+drop sequence guest_num;
+
+-- 데이터 저장
+insert into guestbook values (guest_num.nextval, '홍길동','1234@naver.com','내일은','웃으리',sysdate);
+
+-- 데이터 검색
+select*from guestbook;
+select*from guestbook where board_num = 43;
+
+select num, name, email, subject, content,logtime
+from (select rownum rn,tt.*from(select * from guestbook order by num desc)tt) where rn>=1 and rn<=10;
+
+-- 데이터 총 갯수 구하기
+select count(*) from guestbook;
+
+-- 데이터 삭제
+delete guestbook where num=1;
+
+-- DB 저장
+commit;

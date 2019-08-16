@@ -1,0 +1,84 @@
+﻿{
+  "column" : {
+	"item": [
+		    {
+			"num": 1,
+			"img": "http://192.168.0.10/images/flower01.png",
+			"subject": "고구마꽃",
+			"content": "행운"
+		    },
+		    {
+			"num": 2,
+			"img": "http://192.168.0.10/images/flower02.png",
+			"subject": "국화꽃",
+			"content": "성실, 청초, 고상함 [빨강,자홍색]사랑, [흰색]순결 [황색]질투"
+		    },
+		    {
+			"num": 3,
+			"img": "http://192.168.0.10/images/flower03.png",
+			"subject": "대나무꽃",
+			"content": "지조, 인내, 절개, 절정"
+		    },
+		    {
+			"num": 4,
+			"img": "http://192.168.0.10/images/flower04.png",
+			"subject": "동자꽃",
+			"content": "기다림"
+		    },
+		    {
+			"num": 5,
+			"img": "http://192.168.0.10/images/flower05.png",
+			"subject": "백합꽃",
+			"content": "[빨간색] 열정, 깨끗함, [주황색] 명랑한 사랑, [노란색] 유쾌, [분홍색] 사랑의 맹세, [흰색] 순수한 사랑, 순결"
+		    },
+		    {
+			"num": 6,
+			"img": "http://192.168.0.10/images/flower06.png",
+			"subject": "소나무꽃",
+			"content": "불로장수, 불로장생, 용감"
+		    },
+		    {
+			"num": 7,
+			"img": "http://192.168.0.10/images/flower07.png",
+			"subject": "솔체꽃",
+			"content": "이루어 질 수없는 사랑"
+		    },
+		    {
+			"num": 8,
+			"img": "http://192.168.0.10/images/flower08.png",
+			"subject": "양귀비꽃",
+			"content": "권[빨강]위로, [흰색]망각"
+		    },
+		    {
+			"num": 9,
+			"img": "http://192.168.0.10/images/flower09.png",
+			"subject": "은방울꽃",
+			"content": "섬세함"
+		    },
+		    {
+			"num": 10,
+			"img": "http://192.168.0.10/images/flower10.png",
+			"subject": "장미",
+			"content": "[노랑색]질투, 완벽한 성취, [흰색] 순결, 순진, 매력, [빨강색] 욕망, 열정, 기쁨, [파랑색] 기적, [핑크색] 맹세, 행복한 사랑"
+		    },
+		    {
+			"num": 11,
+			"img": "http://192.168.0.10/images/flower11.png",
+			"subject": "찔레꽃",
+			"content": "고독, 신중한 사랑, 가족에 대한 그리움"
+		    },
+		    {
+			"num": 12,
+			"img": "http://192.168.0.10/images/flower12.png",
+			"subject": "투구꽃",
+			"content": "밤의 열림"
+		    },
+		    {
+			"num": 13,
+			"img": "http://192.168.0.10/images/flower13.png",
+			"subject": "해바라기",
+			"content": "애모, 아름다운 빛, 그리움, 기다림, 숭배"
+		    }
+	        ]
+      }
+}

@@ -1,0 +1,6 @@
+127.0.0.1 - - [26/Jun/2019:16:05:34 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [26/Jun/2019:16:05:35 +0900] "GET /springB/main/index.jsp HTTP/1.1" 200 341
+0:0:0:0:0:0:0:1 - - [26/Jun/2019:16:05:39 +0900] "GET /springB/member/loginForm.do HTTP/1.1" 500 10874
+0:0:0:0:0:0:0:1 - - [26/Jun/2019:16:10:06 +0900] "GET /springB/main/index.jsp HTTP/1.1" 200 341
+0:0:0:0:0:0:0:1 - - [26/Jun/2019:16:10:07 +0900] "GET /springB/board/boardList.do?pg=1 HTTP/1.1" 500 10874
+0:0:0:0:0:0:0:1 - - [26/Jun/2019:16:10:10 +0900] "GET /springB/member/writeForm.do HTTP/1.1" 500 10874

@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1" style="width: 600px;">
+		<tr align="center" bgcolor="yellow">
+			<td width="70">글번호</td>
+			<td>작성자</td>
+			<td width="100">이메일</td>
+			<td width="100">제목</td>
+			<td width="100">내용</td>
+			<td width="100">작성일</td>
+		</tr>
+		<c:forEach var="dto" items="${list}">
+			<tr bgcolor="lightyellow" id="subjectA">
+				<td>${dto.num}</td>
+				<td> ${dto.name}</td>
+				<td>${dto.email}</td>
+				<td>${dto.subject}</td>
+				<td>${dto.content}</td>
+				<td>${dto.logtime}</td>
+			</tr>
+		</c:forEach>
+		<tr>
+			<td colspan="6" align="center">
+			<c:if test="${startPage>3}">
+			<a href="../guest/list.do?pg=${startPage-1 }" id ="Paging">
+				[이전]
+				</a>
+			</c:if>
+				<c:forEach var="i" begin="${startPage}" end="${endPage}" step="1">
+				<c:if test="${pg == i }">
+				<a href="../guest/list.do?pg=${i}" id="currentPaging">[${i}]</a> 
+				</c:if>
+				<c:if test="${pg != i }">
+				<a href="../guest/list.do?pg=${i}" id="Paging">[${i}]</a> 
+				</c:if>
+				</c:forEach>
+			<c:if test="${endPage < totalP }">
+			<a href="../guest/list.do?pg=${endPage+1 }" id="Paging">
+				[다음]
+			</a>
+			</c:if>
+			</td>
+		</tr>
+	</table>
+	<input type="button" value="성적입력" onclick="location.href='writeForm.do'">
+</table>
+
+</body>
+</html>

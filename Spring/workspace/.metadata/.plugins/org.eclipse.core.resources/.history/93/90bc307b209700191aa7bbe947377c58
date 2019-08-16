@@ -1,0 +1,13 @@
+package member.action;
+
+import board.controller.Action;
+
+public class LoginFail implements Action{
+
+	@Override
+	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setAttribute("req_page", "/member/loginFail.jsp");
+		return "index.jsp";
+	}
+
+}

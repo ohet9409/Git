@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Foo foo1 = new Foo(); 와 동일 -->
+	<bean id="foo1" class="sample2.Foo" scope="prototype"/>
+	<!-- Foo foo2 = new Foo("테스트"); 와 동일 -->
+	<bean id="foo2" class="sample2.Foo">
+	<constructor-arg value="테스트"/>
+	</bean>
+	<!-- Foo foo3 = new Foo(25, "Hello"); 와 동일 -->
+	<bean id="foo3" class="sample2.Foo">
+	<constructor-arg index="0" value="Hello"/>
+	<constructor-arg index="1" value="25"/>
+	</bean>
+	<!-- Foo foo4 = new Foo(25, "Hello"); 와 동일 -->
+	<bean id="foo4" class="sample2.Foo">
+	<constructor-arg index="0" type="String" value="Hello"/>
+	<constructor-arg index="1" type="int" value="25"/>
+	</bean>
+	<!-- Foo foo5 = new Foo(25, "Hello", true); 와 동일 -->
+	<bean id="foo5" class="sample2.Foo">
+	<constructor-arg index="0" type="String" value="Hello"/>
+	<constructor-arg index="1" type="int" value="25"/>
+	<constructor-arg index="2" type="Boolean" value="true"/>
+	</bean>
+	<!-- Foo foo6 = new Foo(bar); 와 동일 -->
+	<bean id="foo6" class="sample2.Foo">
+	<constructor-arg ref="bar"/>
+	</bean>
+	<bean id="bar" class="sample2.Bar"/>
+</beans>

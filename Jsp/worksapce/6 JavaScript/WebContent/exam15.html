@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클릭해서 결과 보기</title>
+<script type="text/javascript">
+	function sum(x, y) {
+		return x+y;
+	}
+	function printResult() {
+		var result = sum(10,50);
+		
+		// 태그 선택하기 1 : id 속성 이용
+		/* var mytag = document.getElementById("question");
+		mytag.innerHTML = result; */
+		
+		// 태그 선택하기 2 : name 속성 이용
+	    var mytag = document.getElementsByName("question");
+		mytag[0].innerHTML = result; 
+	} 
+</script>
+</head>
+<body>
+<h2>10 + 50 = <span name="question" id="question">?</span></h2>
+<input type="button" value ="결과보기" onclick="printResult()">
+</body>
+</html>
+<!--
+span 태그는 인라인 형식으로 공간을 분할한다고 되어있습니다.
+
+In Line 라인인에 속한다는 뜻입니다.
+
+즉 개행(Enter)를 하지 않는다고 보시면 되겠습니다.
+
+  
+
+[HTML] name과 id의 차이점  * HTML / Program   
+
+
+▶ name
+(1) document.폼객체명.폼원소명.value
+(2) document.getElementsByName("네임명")
+▶ id
+(1) document.all.id.value
+(2) id.value
+(3) document.getElementById("폼원소아이디").value
+
+id는 자바 스크립트에서 다룰려고 지정하는 것이고
+
+name은 파라미터 전송을 하기 위해서 지정하는 것이다.
+
+
+  -->

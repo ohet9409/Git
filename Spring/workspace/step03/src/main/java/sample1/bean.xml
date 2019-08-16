@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="messageBean" class="sample1.MessageBeanImpl">
+	<!-- 생성자로 초기화 1 
+	<constructor-arg>
+		<value>딸기</value>
+	</constructor-arg>
+	-->
+	<!-- 생성자로 초기화 2 -->
+	<constructor-arg value="딸기"/>
+	
+	<!-- setter로 초기화 1 
+	<property name="cost">
+		<value>2500</value>
+	</property>
+	-->
+	<!-- setter로 초기화 2 -->
+	<property name="cost" value="2500"/>
+	</bean>
+	<!-- 매개변수 2개짜리 생성자 호출하는 bean 객체 설정 -->
+	<bean id="message2" class="sample1.MessageBeanImpl">
+	<constructor-arg value="바나나"/>
+	<constructor-arg value="3000"/>
+	</bean>
+</beans>

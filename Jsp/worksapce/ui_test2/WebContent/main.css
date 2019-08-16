@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* 초기화 */
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body, div, dl, dt, dd,  h1, h2, h3, h4, h5, h6, form, fieldset, button{
+	margin: 0;
+	padding: 0;
+}
+/* 화면설정 */
+header {
+	background-color: yellow;
+	
+}
+#back {
+	background-color: orange;
+}
+nav {
+	background-color: orange;
+	height: auto;
+	float: left;
+	
+	
+}
+section{
+	margin-left:175px;
+	background-color: skyblue;
+	position: relative;
+}
+footer{
+	padding-top:10px;
+	background-color: magenta;
+}
+#border{
+	padding:5px;
+	margin:5px;
+	border: 1px solid white;
+}
+
+h2, h3 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#wrap{
+	width: 760px;
+	margin: auto;
+}
+#head {
+	padding-bottom: 10px
+}

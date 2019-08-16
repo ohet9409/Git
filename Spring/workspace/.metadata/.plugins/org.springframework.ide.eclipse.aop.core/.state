@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="step06_test2"/>
+<aop-project name="step03_test2"/>
+<aop-project name="step02"/>
+<aop-project name="step06"/>
+<aop-project name="step17"/>
+<aop-project name="step20"/>
+<aop-project name="step18_test2"/>
+<aop-project name="SpringBoard_1"/>
+<aop-project name="step14-1"/>
+<aop-project name="SpringBoard"/>
+<aop-project name="step15_test2"/>
+<aop-project name="spring_test"/>
+<aop-project name="step14_test2-1"/>
+<aop-project name="springB"/>
+<aop-project name="step08_test1"/>
+<aop-project name="step01"/>
+<aop-project name="step05"/>
+<aop-project name="step12"/>
+<aop-project name="step16"/>
+<aop-project name="step20_test1"/>
+<aop-project name="step07_test1"/>
+<aop-project name="step12_test1"/>
+<aop-project name="step03_test4"/>
+<aop-project name="step08_test2"/>
+<aop-project name="step04"/>
+<aop-project name="step08"/>
+<aop-project name="step11"/>
+<aop-project name="step15"/>
+<aop-project name="step19"/>
+<aop-project name="step18_test4"/>
+<aop-project name="step03_test3"/>
+<aop-project name="step03"/>
+<aop-project name="step07"/>
+<aop-project name="step10"/>
+<aop-project name="step14"/>
+<aop-project name="step18"/>
+<aop-project name="step18_test3"/>
+</aop-reference-model>

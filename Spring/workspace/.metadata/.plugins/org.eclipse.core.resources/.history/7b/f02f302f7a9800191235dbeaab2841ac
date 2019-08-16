@@ -1,0 +1,5 @@
+package imageboard.controller;
+
+public class ImageboardController {
+
+}

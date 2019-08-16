@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+        "path": "D:\\android_3rd_oh\\Dropbox\\jsp\\worksapce\\6 JavaScript"
+    },
+    {
+        "path": "D:\\android_3rd_oh\\Dropbox\\jsp\\worksapce\\8-JSP"
+    }
+],
+  "settings": {
+    "javascript.referencesCodeLens.enabled": false,
+    "editor.suggest.filterGraceful": false,
+    "typescript.implementationsCodeLens.enabled": false,
+    "editor.quickSuggestionsDelay": 200,
+    "typescript.referencesCodeLens.enabled": false,
+    "editor.detectIndentation": false,
+    "auto-close-tag.SublimeText3Mode": true,
+    "htmlhint.options": {
+        "attr-value-double-quotes": true,
+        "attr-no-duplication": true,
+        "tag-pair": true,
+        "spec-char-escape": true,
+        "id-unique": false,
+        "src-not-empty": true,
+        "title-require": true
+    }
+  }
+}

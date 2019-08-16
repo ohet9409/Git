@@ -1,0 +1,6 @@
+127.0.0.1 - - [25/Jun/2019:09:34:25 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [25/Jun/2019:09:34:26 +0900] "GET /11-board/main/index.jsp HTTP/1.1" 200 344
+0:0:0:0:0:0:0:1 - - [25/Jun/2019:09:34:28 +0900] "GET /11-board/member/loginForm.jsp HTTP/1.1" 200 789
+0:0:0:0:0:0:0:1 - - [25/Jun/2019:09:34:28 +0900] "GET /11-board/script/memberScript.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [25/Jun/2019:09:34:30 +0900] "GET /11-board/main/index.jsp HTTP/1.1" 200 344
+0:0:0:0:0:0:0:1 - - [25/Jun/2019:09:34:31 +0900] "GET /11-board/board/boardList.jsp?pg=1 HTTP/1.1" 200 2439

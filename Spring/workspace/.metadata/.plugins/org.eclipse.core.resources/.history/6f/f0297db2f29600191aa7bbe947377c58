@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1" style="width: 600px;">
+		<tr align="center" bgcolor="yellow">
+			<td width="70">글번호</td>
+			<td>작성자</td>
+			<td width="100">이메일</td>
+			<td width="100">제목</td>
+			<td width="100">내용</td>
+			<td width="100">작성일</td>
+		</tr>
+		<c:forEach var="dto" items="${list}">
+			<tr bgcolor="lightyellow" id="subjectA">
+				<td>${dto.num}</td>
+				<td> ${dto.name}</td>
+				<td>${dto.email}</td>
+				<td>${dto.subject}</td>
+				<td>${dto.content}</td>
+				<td>${dto.logtime}</td>
+			</tr>
+		</c:forEach>
+</table>
+
+</body>
+</html>

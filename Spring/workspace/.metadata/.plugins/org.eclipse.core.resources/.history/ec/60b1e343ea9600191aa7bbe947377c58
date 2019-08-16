@@ -1,0 +1,5 @@
+package guest.dao;
+
+public class GuestDAO {
+
+}

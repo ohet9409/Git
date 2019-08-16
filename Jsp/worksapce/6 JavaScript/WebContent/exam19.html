@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function doPrint() {
+		/* document.getElementById("myid").innerHTML = "스크립트가 실행되었습니다."; */ //-- 첫번째 id에 적용된다. -->
+		var h2Tag = document.getElementsByName("myName");
+		h2Tag[0].innerHTML = "TEST1";
+		h2Tag[1].innerHTML = "TEST2";
+		h2Tag[2].innerHTML = "TEST3";
+	}
+</script>
+</head>
+<body>
+<h2 id="myid" Name ="myName">안녕하세요</h2>		
+<h2 id ="myid" Name ="myName">자바스크립트 입니다.</h2>
+<h2 id ="myid" Name ="myName">강의 참 재미있죠?</h2>
+<a href="#" onclick="doPrint()">자바스크립트 호출하기</a>
+</body>
+</html>

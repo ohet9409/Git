@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- plugin 참조 -->
+<script type="text/javascript" src="plugins/xdomain/jquery.xdomainajax.js"></script>
+</head>
+<body>
+<h1 class="title">서울 경기 인천 날씨정보<span id="date">날짜</span> </h1>
+<!-- 데이터 출력될 곳 -->
+<ul id="list"></ul>
+</body>
+</html>

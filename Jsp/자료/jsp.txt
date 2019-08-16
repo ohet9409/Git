@@ -1,0 +1,436 @@
+* HTML 문서의 구성
+1. HTML 언어	: 내용
+2. CSS 언어	: 꾸미기
+3. Javascript 언어	: 동작
+  => jQuery, Ajax
+
+* HTML 언어의 구조
+<이름 속성="값">내용</이름>
+시작태그		    종료태그
+=> 내용이 없을 때, 약식 표현 사용 가능
+<이름 속성="값"></이름>
+<이름 속성="값"/>
+
+* test 주소
+http://localhost:8080/test.html
+
+* 아파치 서버가 관리하는 폴더위치
+D:\android_3rd\jsp\apache-tomcat-8.5.40\webapps\ROOT
+
+* 이클립스에 등록된 서버의 폴더 위치
+D:\android_3rd\jsp\workspace\.metadata\.plugins
+\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT
+
+* html 태그의 종류
+1. 블럭 태그
+  => 묶어주는 기능
+  => 자동줄넘김이 있음
+2. 인라인 태그
+  => 자동줄넘김이 없음
+
+* 요청 URL의 구조
+http://localhost:8080/test.html?user_id=hong
+	            요청파일명?서버로 보내는 데이터
+ 
+(예)
+http://localhost:8080/6-html/exam2.html?user_id=hong
+http://localhost:8080/6-html/exam2.html?user_id=hong&user_name=gidong&user_pw=1234&memo=i+am+iron+man%21%21%21&data=hidden+data
+http://localhost:8080/6-html/exam5.html?hobby=%EC%B6%95%EA%B5%AC&hobby=%EB%86%8D%EA%B5%AC&hobby=%EC%95%BC%EA%B5%AC
+http://localhost:8080/6-html/exam5.html?hobby=%EC%B6%95%EA%B5%AC&hobby=%EB%86%8D%EA%B5%AC&hobby=%EC%95%BC%EA%B5%AC&gender=M
+http://localhost:8080/6-html/exam6.html?telecom=KT
+http://localhost:8080/6-html/exam6.html?telecom=KT&smartphone=android&smartphone=iOS&smartphone=window
+http://localhost:8080/6-html/exam7.html?photo=D%3A%5Candroid_3rd%5Cjsp%5C%EC%9E%90%EB%A3%8C%5CJSP%EA%B5%90%EC%9E%AC_v2.1_part1.pdf
+http://localhost:8080/6-html/result.html?user_name=hong
+
+* 웹프로그램 언어를 공부하는 목적
+  => 클라이언트에서 서버로 전송된 데이터를 처리하기 위해서....
+  => jsp, php, asp......
+
+* 에러 코드
+404 : 파일 없음
+500 : jsp 파일 코드 에러
+
+* HTML 문서의 구성
+1. HTML 언어
+  => 내용
+2. CSS 언어
+  => 꾸미기
+3. Javascript 언어
+  => 동작 + 이벤트 처리
+
+* CSS의 기본
+1. CSS 사용방법
+  => 3가지
+  1) <style> 태그 사용	=> 한 페이지에 여러 태그에 적용할 때, 양이 중간
+  2) style 속성 사용		=> 특정 태그에만 적용할 때,              양이 적음
+  3) css 파일 사용		=> 여러 파일에서 공통 사용할 때,       양이 많음
+2. 선택자 (Selector)
+  => 태그를 선택하는 방법
+    1) 태그 이름으로 선택	예) p {} div{}
+    2) class 속성으로 선택	예) .이름 {}
+    3) id 속성으로 선택	예) #이름 {}
+    4) 자식 셀렉터 사용
+    5) 자손 셀렉터 사용
+    6) 가상 클래스 기법
+
+* HTML에서의 화면 분할 방법
+1. Table 태그 이용
+   => 화면크기 고정일 때
+2. CSS 이용
+   => 화면크기 고정일 때
+   => 화면크기 가변일 때
+
+* CSS에서 태그에 이름 붙이기
+1. class 속성
+  => 여러 태그를 한꺼번에 이름 붙일 때
+2. id 속성
+  => 태그 하나에만 이름 붙일 때
+
+* 배경(background) 스타일 
+(1) background 속성
+  - 배경에 관련된 여러 가지 속성을 포함한다.
+  - background 속성은 아래의 여러 속성들을 지정할 수 있다.
+  - 한 요소에 여러개의 배경 이미지를 적용할 수 있다.
+	.bg{
+		width: 600px;
+		height: 400px;
+		border: 3px solid;
+		background: 
+			url(img/bg_a.png) no-repeat 0 0,
+			url(img/bg_b.png) no-repeat 100% 0,
+			url(img/bg_c.png) no-repeat 0 100%,
+			url(img/bg_d.png) no-repeat 100% 100%,
+			url(img/bg_e.png) no-repeat 40px 40px;
+	}
+  - background-color : 색상 [ red, rgba(0, 255, 0, 0.4) ]
+  - background-image : 이미지 경로 [ url(img/star.png) ]
+  - background-repeat : 이미지의 반복 지정 
+	[ repeat : 반복, no-repeat : 반복안함, repeat-x : x축으로 반복, repeat-y : y축으로 반복 ]
+  - background-attachment : 이미지의 고정
+	[ scroll : 기본값, 내용이 스크롤될 때 같이 움직인다, fixed : 내용이 스크롤 되더라도 안 움직인다.]
+  - background-position : 이미지의 위치 
+    [ 가로 : left, center, right, 세로 : top, center, bottom, 숫자 : px, % ]
+    background-position : left top;		/* 가로 세로 */
+  - background-size : 이미지의 크기 조절
+    background-size : 100%;			/* width 100% */
+    background-size : 100% 100%;		/* width 100%, height 100%*/
+  - background-clip : 배경을 'content' 영역에만 보이게 하는 속성
+ 	=> 배경은 padding 영역까지 보이지만, 이 속성으로 padding 영역의 배경을 보이지 않게 지정한다.
+ 	=> padding 영역의 배경은 잘린다.
+	background-clip : content-box;
+  - background-origin : 배경을 'content' 영역에 맞추어 보이게 하는 속성
+	=> padding 영역의 배경에 잘리지 않는다
+	=> 배경이미지가 content-box 영역에 잘리지 않고 정확히 나타난다.
+	background-origin : content-box;
+
+
+
+
+
+
+
+
+* 서체(font)와 글(text) 스타일
+(1) 서체
+  1) font-family 속성
+	- 서체를 지정
+	- 예) body { font-family : '돋움‘, dotum, helvetica, sans-serif; }
+  2) @font-face
+	- 서체를 같이 올려두고 연결하는 방법
+	- 예) <style type="text/css">
+			@font-face{
+				font-family: 'Nanum Gothic';
+				src:url(fonts/NanumGothic.eot);
+				src:url(fonts/NanumGothic.eot?#iefix) format('embedded-opentype'),
+					url(fonts/NanumGothic.woff) format('woff'),
+					url(fonts/NanumGothic.ttf) format('truetype')
+			}
+			p{
+				font-family: 'Nanum Gothic', sans-serif;
+			}
+		  </style>
+
+(2) 글자 크기 지정
+  1) font-size
+	- 예) p { font-size: 2em; }
+
+(3) 글자 두께 지정
+  1) font-weight
+	- 기본 두께 (normal)
+		font-weight: normal;
+		font-weight: lighter;
+		font-weight: 100;
+		...
+		font-weight: 500;
+	- 볼드체 (bold)
+		font-weight: bold;
+		font-weight: bolder;
+		font-weight: 600;
+		...
+		font-weight: 900;
+
+(4) 글자 장식
+  1) text-decoration
+	- none : 장식이 없다.	
+	- underline : 밑줄
+	- overline : 윗줄
+	- line-through : 가운데 지나가는 선
+	- blink : 깜빡거림 => 더 이상 지원안함
+
+(5) 글자 스타일 지정
+  1) font-style
+	- italic : 기울임		- oblique : 비스듬하게		- normal : 기울어진 글자를 바로 세움
+(6) 글자 색 지정
+  1) color 
+	- 예) p { color: red; }
+
+(7) 글 정렬 지정
+  1) text-align
+	- left : 좌측정렬 	- right : 우측정렬	- center : 중앙정렬		-justify : 양쪽정렬
+
+(8) 수직 정렬 지정
+  1) vertical-align
+	- 인라인 요소끼리의 위, 아래 간격을 맞출 수 있다.
+	- <img> 요소는 블록요소 안에 있을 경우 약간의 공백이 발생할 수 있는데, 
+	  vertical-align을 이용해서 그 공백을 없앨 수 있다.
+	  예) img { 	vertical-align: top; }
+	- vertical-align: baseline;		/* 글자의 baseline에 맞춤 */
+	- vertical-align: sub;			/* 부모요소의 아래 첨자 위치로 맞춤 */
+	- vertical-align: super;			/* 부모요소의 위 첨자 위치로 맞춤 */
+	- vertical-align: top;			/* 부모요소의 상단에 맞춤 */
+	- vertical-align: text-top;		/* 부모요소의 글꼴 요소의 상단에 맞춤 */
+	- vertical-align: middle;			/* 부모요소의 소문자를 기준으로 중간에 맞춤 */
+	- vertical-align: bottom;		/* 부모요소의 아래쪽에 맞춤 */
+	- vertical-align: text-bottom;	/* 부모요소의 글꼴의 아래쪽에 맞춤 */
+
+(9) 글의 간격 조절
+  1) letter-spacing
+	- 예) p { letter-spacing: 0.1em; }
+  2) word-spacing
+	- 예) p { word-spacing: 0.3em; }
+  3) line-height
+	- 줄이 여러줄일 때 줄간격 지정
+	- 예) p { line-height: 1.6; }		/* 1.6배 */
+
+(10) 글자 들여쓰기
+  1) text-indent
+	- 예) p { text-indent: 1em; }
+
+(11) 영문의 대소문자 지정
+  1) text-transform
+	- 예) h1.uppercase{text-transform: uppercase;}		/* 대문자로 */
+		  h1.lowercase{text-transform: lowercase;}		/* 소문자로 */
+		  h1.capitalize{text-transform: capitalize;}		/* 첫글자를 대문자로 */
+  2) text-variant
+	- 예) h1.smallcaps{font-variant: small-caps;} 		/* 대소문자 섞여있을 때, 소문자를 
+														대문자로 변경하고, 크기는 소문자 크기 */
+
+(12) 글의 줄바꿈 처리
+  => 인라인 요소인 ‘글(text)'은 자신을 감싸고 있는 상위 블록 요소의 'width'를 넘어서게 되면 줄을 
+     바꾸게 된다. 
+  1) word-break
+	- 단어를 깨뜨려 줄바꿈을 지정
+	- 예) <style>
+			body{
+				width: 400px;
+				font-family: '돋움',dotum,helvetica,sans-serif;
+				font-size: 12px;
+				text-align: justify;			
+			}
+			.area{
+				background-color: #ddd;
+				word-break: break-all;		/* text-align: justify;와 같이 지정 */ 
+			}
+		  </style>
+  2) white-space
+	- 줄바꿈을 금지하거나, <pre> 요소의 특성을 부여
+	- nowrap : 줄바꿈 금지
+	- pre : <pre> 요소를 지정한 것처럼 띄어쓰기나 줄바꿈 등이 작성한 그대로 표현된다.
+	- pre-wrap : 앞의 pre의 효과와 비슷하지만, 지정한 영역을 넘어가지 않는다.
+	- pre-line : pre-wrap과 비슷하지만, 띄어쓰기한 공백은 한 칸만 표현된다.
+	- 예) <style>			
+			.nowrap{
+				white-space: nowrap;
+			}
+			.pre{
+				white-space: pre;
+			}
+			.pre-wrap{
+				white-space: pre-wrap;
+			}
+			.pre-line{
+				white-space: pre-line;
+			}
+		  </style>
+
+
+
+
+
+* 화면구성 용어 정리
+1. GNB (Global Navigation Bar)
+ => 사이트 최상위 전체 공통 네비게이션
+ => 메인 메뉴, 대분류 메뉴, 전체 사이트에서 사용되는 공통메뉴바
+2. LNB (Local Navigation Bar)
+ => 현재 서비스 영역(Local)만 해당하는 네비게이션
+ => 서브 메뉴, 중분류 메뉴, 각 서브 분류 별 사용되는 메뉴바
+3. SNB (Side Navigation Bar)
+ => 메인 메뉴, 서브 메뉴를 제외한 나머지 사이드 메뉴, 기타 메뉴바
+4. FNB (Foot Navigation Bar)
+ => 하단 메뉴, 하단 로고, 주소, 카피라이팅 영역
+
+
+url 구조: checkId.jsp?id=" + sId,"","width=350 height=100 left=500 top=200
+	요청파일 ? 전송데이터
+
+<쿠키, 세션>
+=> 용도: 여러페이지가 데이터를 공유하는 방법
+쿠키: 공유데이터를 클라이언트에 저장 (브라우저가 관리) 보안관련X 데이터
+	브라우저 영역이기 때문에 encoding 해야한다.
+
+세션: 공유데이터를 서버에 저장(톰캣서버가 관리) 보안관련 데이터
+	자바영역에서 처리하기 때문에 encoding할 필요가 없음
+*쿠키의 동작 순서
+1. 브라우저가 파일 요청
+http://localhost:8080/12-Cookie_Session/makeCookie.jsp
+2. 서버가 쿠키정보를 만들고, 응답 HTML 문서 만들기
+=> makeCookie.jsp에 대한 HTML 문서를 응답한다.
+     이때 쿠키 정보도 같이 보냄
+3. 브라우저는 응답 HTML 문서를 번역해서 보여주면서, 쿠키 정보를 쿠키 저장소에 저장시킴
+4. 브라우저가 다시 파일 요청을 할 때, 쿠키 정보도 같이 보냄
+=> http://localhost:8080/12-Cookie_Session/useCookie.jsp + 쿠키 정보
+
+
+*게시판
+1. 회원관리
+=> 입력
+=> 검색
+=> 수정
+=> 삭제
+(1) 작업 순서
+ 1) DB 테이블 만들기 + 필요한 sql문 작성 및 테스트
+ 2) 자바 클래스 작성
+  => 자바빈즈 : 테이블에 있는 항목을 묶어서 관리
+  => DAO: JDBC 구현 (CRUD 기능 구현)
+ 3) 웹 작업 (JSP)
+  => 입력화면 만들기
+  => 입력처리
+  => 로그인 화면만들기
+  => 로그인 처리
+  => 회원정보 수정 화면 만들기
+  => 회원정보 수정 처리 
+  => 회원 탈퇴 처리
+  => 회원 목록보기
+2. 글관리
+=> 입력
+=> 검색
+=> 수정
+=> 삭제
+
+*이미지 게시판
+https://blog.naver.com/dydals56789/221515141639
+
+* ~.jsp 파일의 구조
+1.자바영역
+  =>데이터 처리
+  => <% %>가 자바 영역
+
+2. HTML영역
+  =>HTML문서 만들기
+  => <% %>를 뺀 나머지 영역
+
+* JSP 파일에서 자바 코드와 HTML코드를 분리하기
+1. 자바 코드: JSP 파일
+   HTML 코드: JSP 파일
+2. 자바 코드: Java 파일
+   HTML 코드: JSP 파일
+  => MVC패턴
+
+* EL / JSTL
+1. EL 표현식: JSP의 표현식을 대체함(<%= %>)
+   => request 객체가 관리하는 값을 바로 읽어올 수 있음
+  	String name = request.getParameter("name");
+	<%= name%>
+	${param.name}
+2. JSTL: JSP의 제어문을 대체함(if, switch, for, while)
+
+* JSP파일에서 사용되어지는 명령어
+1. Java 명령어
+2. HTML 명령어 (태그, CSS, Javascript)
+3. JSP 명령어
+   => EL/JSTL
+
+* JSTL사용하기위한 다운로드
+https://tomcat.apache.org/download-taglibs.cgi (lmpl, Spec, El)
+
+* 블록의 구분
+namespace Test {
+    	 class AAA{
+		void ex1(){
+			for(){
+				명령문;
+			}
+		}
+	}
+}
+
+<화면 내부 이동 방식>
+1. sendRedirect방식
+   => 브라우저 재요청
+   => 데이터를 공유하지 않을때
+2. forward 방식
+   => 톰캣 서버 내부적으로 동작
+   => 데이터를 공유를 할때
+
+*sendRedirect 방식과 forward 방식에서 다음 페이지까지의 데이터 공유방법
+1. get 방식
+2. request 객체 이용
+=> forward 방식
+3. session, application 객체 이용
+=> sendRedirect 방식, forward 방식
+
+* 내장 객체 이용 데이터 공유
+1.page 		: 현재 페이지에서 공유, 사용안함
+2.request 	: 현재 페이지와 다음 페이지에서 공유
+3.session 	: 모든페이지에서 공유, 브라우저가 열려있는 동안
+4.application 	: 모든페이지에서 공유,프로젝트가 동작될 동안
+
+*jsp 시험
+1. 입력화면 만들기
+2. 입력 데이터를 DB서버에 저장하기
+=> table 만들기
+=> DTO: 자바빈즈
+=> DAO: JDBC 구현(저장, 읽기)
+3. 목록으로 DB서버에 저장된 내용 보여주기
+=> 페이징 처리
+
+
+<JSP>
+=> 자바는 자바대로 웹은 웹으로
+
+1. JSP 파일 => 파일 1개
+1) Data 처리
+=> Java 코드
+2) HTML문서 만들기
+=> HTML + JSP표현식
+
+2. JSP 파일 => 파일 2개
+1） Data 처리
+=> ~.jsp
+=> forward 방식 화면이동
+=> request 객체로 데이터 공유
+2) HTML문서 만들기
+=> ~.jsp
+=> HTML + EL표현식(JSP표현식 대체,request 공유 데이터 사용) + JSTL(Java의 제어문 대체)
+전달: request.setAttribute("name", "홍길동");  =>  받음: ${requestScope.name} -(생략)> ${name}
+
+3. MVC패턴
+1) Data 처리
+=> ~.jsp
+2) HTML문서만들기
+=> ~.jsp
+
+* DB 연동 웹프로그래밍 작업순서
+1. DB Table 작성
+2. DTO, DAO작성
+3. JSP작성

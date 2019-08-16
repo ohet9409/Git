@@ -1,0 +1,391 @@
+* android 기본
+1. 화면만들기
+   => 코드만으로 화면 만들기 : 실행중에 화면 설정 바꾸기
+   => XML 파일에 화면 설정하기
+	-> Java 파일 1개와 xml 파일 1개가 쌍으로 구성됨
+	-> MainActivity.java, activity_main.xml
+ 	-> 화면구성 태그를 직접 타이핑치는 방법
+	-> design 화면에서 꾸미는 방법
+2. 이벤트 처리
+   => 자바문법과 동일
+   => 1. 상속받은 클래스 만들어서 사용
+        2. 직접 상속받기	: 같은 클래스가 많을 때 	=> 기본
+        3. 익명 클래스	: 클래스가 1개일 때		=> 부속화면
+        4. 다형성
+        5. 안드로이드에서 제공하는 방법 
+		=> 권장하지 않음
+		=> onclick 이벤트 1가지만 쓸수 있음
+	
+* 단축키 :
+상속받기(implement, override), 에러(빨간줄) 해결 => alt + enter
+자동완성 => ctrl + enter
+도움말 = > ctrl + q
+줄맞춤 = > ctrl + alt + L
+
+* Android 수업 순서
+1. 화면 만들기
+2. 이벤트 처리하기
+3. ListView 클래스 사용하기
+4. 다이아로그
+5. 화면 이동
+6. 파일 입출력
+7. 기본 HW 사용
+8. 서버 연동
+9. OpenAPI: 카카오
+10. 응용 예제 : 서버연동
+
+* Activity
+1. 화면 1개를 나타냄
+2. 화면 1개를 관리하는 클래스
+   (자바의 Frame 클래스와 동일)
+
+* Toast 클래스
+=> 문자열을 화면에 2~6초 정도 뿌려주는 클래스
+=> 간단한 메세지 출력할 때 사용
+=> 디버깅할 때도 활용
+* setContentView(보여줄 내용)
+=> Activity의 화면을 채우는 함수
+1.setContentView(view 클래스) 
+   => Activity의 화면을 View 클래스로 채움
+2. setContentView(XML 파일의 id)
+   => XML 파일에 설정된 대로 클래스를 메모리에 생성한 후, 
+        그 클래스로 Activity의 화면을 채움
+
+* View 클래스
+=> 화면을 구성하는 클래스들의 부모 클래스
+
+* findViewById(클래스의 id)
+=> setContentView(XML 파일의 id)의 의해서 만들어진 클래스를 id를 통해서 찾아준다.
+=> 리턴값 : View 클래스
+
+* res폴더를 관리하는 클래스
+1. R 클래스
+   => res 폴더의 모든 것을 id로 등록해서 관리하는 클래스
+   => 자동으로 update 됨.
+   => 사용자가 절대 수정하면, 안되는 클래스
+2. Resources 클래스
+   => res 폴더의 모든 것을 항목으로 관리하는 클래스
+   => xml 파일에 설정된 데이터를 읽어와서, 정수, 실수로 변환하는 기능
+
+* 색깔 만들기
+=> xml 파일에서 사용
+#RRGGBB		: red, green, blue
+#AARRGGBB	: alpha(투명도:0 - 투명 255 - 불투명), red, green, blue
+색깔 바꾸기 : text - > tint관련 명령어 설정
+
+* 람다 표현식 (Lambda Expression)
+- 익명클래스를 좀 더 간편하게 표현한 것이 람다 표현식이다.
+- "익명 함수"라고도 한다.
+
+(1) 람다 표현식의 특징
+- 인터페이스에 메소드가 1개인 것들만 람다표현식을 사용할 수 있다.
+- 람다 표현식은 익명클래스로 전환이 가능하며, 메소드가 1개인 익명클래스는
+   람다 표현식으로 전환이 가능하다.
+(2) 람다 표현식의 구성
+	매개변수 목록	화살표 토큰	처리식
+	(int x, int y)	->		x+y
+
+usb 통합 드라이버 설치
+LG : https://www.lge.co.kr/lgekor/download-center/downloadCenterList.do
+SAMSUNG : https://local.sec.samsung.com/comLocal/support/down/kies_main.do?kind=usb
+
+* EditText 에 기본 문자열 설정
+1. text 속성
+   -> 데이터로서 문자열
+   -> 커서가 있어도 글자가 그대로 있음
+2. hint 속성
+   -> 참고로서 문자열
+   -> 한글자라도 입력이 있으면 기존글자가 사라짐
+   참고로서 문자열
+
+<EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ex) 홍길동"
+        android:inputType="textPersonName" />
+
+    <requestFocus/> ==> 해당 EditText에 어플 실행시 포커스 이동
+
+* 권한의 종류
+1. 일반권한
+- 개인보안에 영향을 안주는 것.
+- 앱이 설치될 때, 권한이 부여됨
+
+2. 위험 권한
+- 개인 정보가 담겨있는 정보에 접근하거나, 스마트폰의 장치에 접근할 수 있는 권한
+- 위치정보, 파일, 마이크, 카메라, 연락처, 일정 등...
+- 앱이 실행될 때, 권한을 부여
+- 만약, 사용자가 권한을 부여하지 않으면, 해당 기능은 동작하지 않는다.
+
+http://media.w3.org/2010/05/bunny/movie.mp4
+
+* android에서 Hardware 기능을 사용하는 방법
+1.  전용 클래스를 사용하는 방법
+2.  인텐트를 사용하는 방법
+	=> 스마트폰에서 동작되는 다른앱을 통해서 동작시키는 것
+	=> 간접적으로 HW 기능 사용
+
+* 화면 전환
+1. Layout을 이용하는 방법
+   => 같은 주제안에서 화면전환을 할 때 주로 사용
+   => 장점 : 속도가 빠르다
+        단점 : XML 파일의 컴포넌트들의 id가 복잡해진다.
+   => visibility 속성 이용
+	visible : 보여라
+	invisible : 자리를 차지하면서 보이지 마라
+	gone : 자리를 차지하지 말고, 보이지 마라
+2. Intent를 이용하는 방법
+   => 주제가 달라질 때 주로 사용
+   => 장점 : XML 파일의 컴포넌트들의 id가 간단해진다.
+        단점 : 속도가 약간 느리다.
+3. ViewPager를 이용하는 방법 (ListView와 사용법이 비슷)
+
+<ListView>
+1. 광의
+   => 목록으로 데이터를 보여주는 View 클래스
+2. 협의
+   List에 저장된 데이터를 보여주는 View 클래스
+
+* Inflater 클래스
+예)  View loginView = getLayoutInflater().inflate(R.layout.dialog,null);
+- XML 파일에 설정된 클래스를 메모리에 생성하는 클래스
+- 종류 : LayoutInflater, MenuInflater
+- inflate(XML 파일의 id, 삽입할 layout)
+  => XML 파일에 설정된 클래스를 메모리에 생성하는 메소드
+- Inflater 클래스를 얻는 방법
+  => new로 만들면 안됨
+  => Activity나 시스템으로부터 얻어와야 함.
+1. LayoutInflater inflater = getLayoutInflater();
+2. LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+https://blog.naver.com/dajung674/221400708731
+
+* ListView
+- 목록으로 데이터를 보여주는 View 클래스
+- List 클래스와 쌍으로 많이 사용함
+  => 그래서, 협의 : List클래스에 저장된 데이터를 보여주는 View 클래스라고 불림
+- List클래스에 저장된 Data를 보여주는 View Class
+- adapter를 통해서 리스트를 채운다
+
+* footer 기능
+=> ListView를 사용할 때, 보여주어야 할 Data가 많을 경우
+    Data를 분할해서 읽어와서 보여주는 기능
+=> 사용법
+1. 끝에 도착하면 자동으로 다음 데이터 불러오기
+2. 끝에 버튼을 눌러서 다음 데이터 불러오기
+
+// 디버깅 용
+        System.out.println("[TEST] position =" + position);
+        Log.d("[EXAM] position", position+"");
+
+* 함수의 리턴값으로 여러개를 리턴하는 방법
+1. 자바빈즈 이용
+2. 컬렉션 이용	(자료형이 다를경우)
+3. 배열		(자료형이 같을경우)
+
+int[] arr ;	// 레퍼런스 변수
+arr = new int[3];
+
+* FrameLayout
+  => 컴포넌트를 중첩해서 보여줌
+
+android:indeterminateTint="#ff20faa7"  : 프로그래스바 색 변경
+
+* intent 클래스 (택배)
+Activity : 내가 만든 앱, 시스템이 존재하는 앱
+=> Activity 간의 화면 이동 정보를 관리하는 클래스
+=> 이동정보(화면을 보여주세요) + 데이터(전달해주세요)
+=> Activity는 완전히 독립된 화면1개이기 때문에,
+     Activity간에는 데이터를 공유하지 않음
+=> 그래서 어떤 Activity의 데이터를 다른 Activity로
+     전달할 때, Intent를 이용함
+=> Activity간의 화면전환할때 사용
+
+* Activity 만들기
+1. ~.xml		=> activity_test.xml
+2. ~.java		=> TestActivity.java
+3. 매니페스트에 등록
+   => 앱에서 사용되는 Activity는 반드시 매니페스트에 등록되어야만 사용할 수 있음
+
+* intent 사용
+Activity => startActivity(인텐트);
+1. 생성 : Intent intent = new Intent(this,Main2Activity.class);
+2. 데이터 저장 : intent.putExtra("title",title);
+3. 보내기 : startActivity(intent);
+4. 꺼내기 준비 : Intent fromIntent = getIntent();
+5. String 형태 꺼내기 : name = fromIntent.getStringExtra("name");
+6. 정수, 실수형 꺼내기 : age = fromIntent.getIntExtra("age", 0);
+정수 실수 boolean은 디폴트 값이 필요
+
+- 묶어서 데이터 보내기 (직렬화 시키기)
+자바빈즈 클래스에 implements Serializable
+
+메인 Activity에 
+Job item = adapter.getItem(position);
+Intent intent = new Intent(this,ResultActivity.class);
+intent.putExtra("item",item);
+
+result Activity에
+Intent frominten  = getIntent();
+Job item = (Job) frominten.getSerializableExtra("item");
+String title = item.getTitle();
+String description = item.getDescription();
+int image = item.getImage();
+
+<마지막 화면에서 첫번째 화면으로 가기>  이동경로가 없으면 앱 종료
+1. History stack(이동경로 저장소)에 이동경로를 저장하지 않기 option을 줘야한다.
+2. 첫번째화면으로 이동한 후, History stack 비우기
+명령어: 
+// 필요없는 화면에 사용
+finish();
+
+//  다음 화면에 대한 history만 저장하지 않음
+     intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+// history stack 내용 비우기 옵션 설정
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+// 대상 Activity가 존재한다면 새로 만들지 말고, 기존 것을 사용하겠다는 설정(첫번째 화면만 사용가능)
+   intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+* 데이터 전송방식
+1. csv (콤마 분리 방식)
+	90,80,70
+2. xml
+<students>
+	<kor>90</kor>
+	<kor>80</kor>
+	<kor>70</kor>
+</students>
+3. json
+{
+	"kor",90,
+	"eng",80,
+	"mat",70
+}
+
+* 위험 권한 얻기
+ private void permissionCheck1() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE)){
+
+            } else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 100);
+            }
+        }
+    }
+Mainfest.xml에 <uses-permission android:name="android.permission.CALL_PHONE"/> 추가해줘야 함
+
+암묵적 인텐트 만들기 : 다른앱 사용할때 
+intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://m.naver.com"));
+
+intent = new Intent(Intent.ACTION_VIEW);
+intent.setData(Uri.parse("content://contacts/people"));
+
+intent.setDataAndType(audio_uri,"audio/*");
+
+* 스마트폰에 데이터 저장 방법
+1. 파일에 저장
+   => 문자열 저장
+   => 객체 저장
+   => 환경설정 저장 (XML)
+2. SQLite 이용 (DB)
+
+	<뜨기 전>		<화면이 떠있는 중>	<사라지기 전>
+	onCreate()		Activity			onPause();
+							-> 화면이 가려질때마다 호출	(저장하는 코드를 주로 사용)
+	onStart()			이벤트 관련 함수		onStep();
+	onResume()		onClick;			onDestroy();
+	->화면이 뜰때마다 호출
+(저장한 자료를 읽어올 때 주로 사용)
+	10여가지			onItemClick()		10여가지
+
+관련 링크: https://developer.android.com/reference/android/app/Activity
+
+String sql ="update " + tableName +" set kor = " + kor + ",eng = " + eng + ",mat = " + mat
+", tot=" + tot + ",avg = " + avg + "where name = " + name +";";
+database.exeSQL(sql) ;
+
+* LocationManager
+=> 위치 관리자
+=> 스마트폰의 위치관리
+=> 시스템 서비스
+
+* GPS 이용 현재 위치 확인순서
+1. 위치 관리자 객체 참조하기
+2. 위치 리스너 구현하기
+3. 위치 정보 업데이트 요청하기
+
+* OpenAPI
+=> 특정 사이트에서 제공 기능
+1) 데이터를 전달받는 방식 - XML, JSON
+2) 서비스
+=> 회원 가입을 하고, 인증키가 있어야만 사용가능
+
+* 안드로이드에 라이브러리 등록 방법
+1. 직접 등록하는 방법
+   => Project Structure에서 등록
+2. Maven 이용하는 방법
+
+* 메뉴
+예제 1) 기본 메뉴 사용법
+Application Name : 1-OptionMenu
+
+예제 2) 메뉴화면을 xml 파일로 만들기
+Application Name  : 2-OptionMenuXML
+layout xml file 	: res/menu/optionmenu.xml
+
+예제 3) onClick	: 이벤트 활용하기
+Application Name  : 3-MenuOnClick
+layout xml file 	: res/menu/optionmenu.xml
+
+예제 4) onClick	: ContextMenu 사용하기
+Application Name  : 4-ContextMenuTest
+
+예제 5) PopUp 메뉴 사용하기
+Application Name  : 5-PopupMenuTest
+menu xml file	: res/ menu / popupmenu.xml
+
+예제 6) 메뉴 항목에 CheckBox , RadioButton 추가하기
+Application Name  : 6-MenuCheck
+menu xml file	: res/ menu / menucheck.xml
+
+예제 7) 타이틀바에 메뉴 아이템 아이콘 추가하기
+Application Name  : 7-ChangeMenu
+menu xml file	: res/ menu / beginer.xml, res/ menu / expert.xml
+
+* 아파치 톰캣 설치 성공 테스트
+=> http://localhost:8080/index.jsp
+=> http://192.168.0.61:8080/index.jsp
+
+* 아파치 톰캣에 폴더 추가하기
+1) C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\server_data
+2) D:\android_3rd_oh\Dropbox\android\server_data
+
+* 서버 주소
+http://192.168.0.61:8080/server_data/simple_text.txt
+
+* 라이브러리 다운 사이트 : http://loopj.com/android-async-http/
+라이브러리 등록
+=> Gradle Scripts/build.gradle(Module:app)
+=> dependencies 블럭 제일 밑에 추가
+ dependencies {
+	implementation 'com.loopj.android:android-async-http:1.4.9'
+ }
+=> Sync Project with Gradle Files 아이콘을 클릭해서 등록시킴
+
+* JSON 파일 구조
+{
+	"aaa" : 5,			<= Int
+	"bbb" : 7.7,		<= Double
+	"ccc"  : false,		<= Boolean
+	"ddd" : "홍길동",		<= String
+	"eee" : {			<= Object(중괄호)
+		"kor" : 90, "eng" : 80, "mat" : 70
+	},
+	"fff" : [			<= Array(대괄호)
+		"fff1" : {"kor" : 90, "eng" : 80, "mat" : 70},
+		"fff2" : {"kor" : 90, "eng" : 80, "mat" : 70}
+	]
+}	

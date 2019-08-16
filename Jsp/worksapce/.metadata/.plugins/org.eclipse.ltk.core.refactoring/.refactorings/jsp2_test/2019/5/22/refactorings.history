@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;jsp2_test/WebContent/script/main.js&apos; to &apos;write.js&apos;" description="Rename resource &apos;main.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/script/main.js" name="write.js" stamp="1558923599639" updateReferences="true"/>
+</session>

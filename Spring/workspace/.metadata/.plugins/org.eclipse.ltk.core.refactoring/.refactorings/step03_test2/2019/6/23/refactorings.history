@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 elements to &apos;step03_test3/src/main/java/test3&apos;&#x0D;&#x0A;- Original project: &apos;step03_test2&apos;&#x0D;&#x0A;- Destination element: &apos;step03_test3/src/main/java/test3&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     test2.CalcAdd.java&#x0D;&#x0A;     test2.CalcMul.java&#x0D;&#x0A;     test2.Calc.java&#x0D;&#x0A;     test2.HelloSpring.java&#x0D;&#x0A;     applicationContext.xml" description="Copy elements" destination="=step03_test3/src\/main\/java&lt;test3" element1="src/test2/applicationContext.xml" element2="/src&lt;test2{CalcAdd.java" element3="/src&lt;test2{CalcMul.java" element4="/src&lt;test2{Calc.java" element5="/src&lt;test2{HelloSpring.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1559703042566" units="4" version="1.0"/>
+</session>

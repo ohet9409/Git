@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean 객체 생성 설정 
+		bean 객체 : <bean> 태그 설정으로 만들어진 객체 (자바빈즈랑은 별개)-->
+	<bean id="messageBean" class="sample4.MessageBeanEn"/>
+	<bean id="messageBeanK" class="sample4.MessageBeanKr"/>
+</beans>

@@ -1,0 +1,122 @@
+package guest.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import guest.bean.GuestDTO;
+
+public class GuestDAO {
+	Connection conn;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	DataSource ds;
+	
+	String insert = "insert into guestbook values (guest_num.nextval, ?,?,?,?,sysdate)";
+	String listG = "select num, name, email, subject, content,logtime" + 
+			" from (select rownum rn,tt.*from(select * from guestbook order by num desc)tt) where rn>=? and rn<=?";
+	String totalA = "select count(*)as count from guestbook";
+	
+	public GuestDAO() {
+		try {
+			Context context = new InitialContext();
+			ds = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void close() {
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (conn != null) {
+				conn.close();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	// 글 쓰기
+	public int input(GuestDTO dto) {
+		int su=0;
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement(insert);
+			pstmt.setString(1, dto.getName());
+			pstmt.setString(2, dto.getEmail());
+			pstmt.setString(3, dto.getSubject());
+			pstmt.setString(4, dto.getContent());
+			su = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return su;
+	}
+	
+	// 글 목록
+	public List<GuestDTO> list(int startNum, int endNum) {
+		List<GuestDTO> list = new ArrayList<GuestDTO>();
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement(listG);
+			pstmt.setInt(1, startNum);
+			pstmt.setInt(2, endNum);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				GuestDTO dto = new GuestDTO();
+				dto.setContent(rs.getString("content"));
+				dto.setEmail(rs.getString("email"));
+				dto.setLogtime(rs.getString("logtime"));
+				dto.setName(rs.getString("name"));
+				dto.setNum(rs.getInt("num"));
+				dto.setSubject(rs.getString("subject"));
+				list.add(dto);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return list;
+	}
+	
+	// 총 글수
+	public int totalA() {
+		int su =0;
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement(totalA);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				su = rs.getInt("count");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return su;
+	}
+}
