@@ -1,0 +1,48 @@
+<Collection> : 무한 데이터 저장
+1. Map: 이름중복 X		이름으로 관리
+Map<클래스 자료형>
+Map<String, Integer> map = new HashMap<String, Integer>(); --> 선언
+map.put("aaa", 111);  --> 값 저장
+System.out.println("Map size : " + map.size()); --> 데이터 갯수
+System.out.println(map.get("aaa")); ---> 데이터 출력
+map.remove("aaa");	 --> 해당하는 값 삭제
+map.clear();  --> 전체 데이터 삭제
+
+2. Set: 데이터 값 중복 X	데이터값으로 관리(자주 사용되지 않는다) 
+Set<String> set = new HashSet<String>(); --> 선언
+set.add("호랑이"); --> 데이터 저장(중복 허용x)
+System.out.println("갯수 : " + set.size()); --> 갯수 확인
+
+Iterator<String> it = set.iterator();
+	while(it.hasNext()) {
+		System.out.println(it.next());
+	}		--> 데이터 확인
+
+it = set.iterator(); --> 처음부터 다시 검사(필수)
+	while (it.hasNext()) {
+		if (it.next().equals("코끼리")) {
+		it.remove();
+	}
+	}    		--> 데이터 삭제
+
+3. List: 1차원 배열과 비슷	번지로 관리(0부터 시작), 순서가 존재, 데이터 중복허용
+List<Integer> list = new ArrayList<Integer>(); --> 선언
+list.add(10); --> 데이터 추가
+System.out.println("데이터 갯수 : " + list.size()); --> 데이터 갯수
+System.out.println("5번째 값 : " + list.get(4)); --> 5번째 값 출력(0부터 시작)
+(존재하지 않는 데이터를 불러오면 에러가 난다)
+list.remove(4); --> 5번째 값 삭제 (순서가 다시 재부여 됨)
+list.add(2,123); --> 3번째 위치에 값: 123 추가 (순서 재배치)
+list.set(4, 500); --> 5번째 값:500으로 수정
+list.clear(); --> 전체 데이터 삭제
+* 대량의 데이터 처리 시 기본 동작
+=> CRUD (Create, Read, Update, Delete)
+Create : 저장
+Read : 읽기
+Update : 수정
+Delete : 삭제
+
+<Collection 계열 클래스>
+1.Map - <키,값>, 키는 중복X, 순서X
+2.Set - <값>, 값 중복X, 순서X
+3List - 1차원 배열과 비슷 , 순서(0~), 값 중복O

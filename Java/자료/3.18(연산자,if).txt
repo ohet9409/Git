@@ -1,0 +1,77 @@
+* 증감 연산자의 우선순위
+변수 ++: 우선순위가 꼴찌
+++ 변수: 우선순위가 2순위
+
+* 논리 연산자의 진리표
+                                     and          or      not
+           x           y            x&&y        x||y      !x
+         true       true           true         true    false
+         true       false           false        true    false
+         false       true           false        true    true
+         false       false          false        false    true
+- and: 어느 한 쪽이 false면 false
+- or: 어느 한 쪽이 true면 true
+- not: 반대
+
+* 삼항 연산자 (=조건 연산자)
+==> 항: 항목의 약자(데이터를 나타냄)
+(조건식) ? 값1 : 값2 
+조건식 연산결과가 true이면 값1을 가짐
+조건식 연산결과가 false이면 값2을 가짐
+
+- 문자 한개 입력 : sc.next().cahrAt(0);
+
+* 연산자 사용시 주의사항
+예) 수학식: 5 <= y <=7    -> 이 식이 참이 되는 y는 5,6,7이다
+     컴퓨터: 5 <= y <= 7   -> 에러, (5 <= y)는 불린값, 불린값과 정수는 비교를 할 수 없음
+-> 5<=y && y<=7           -> 두 식을 분리를 시켜야 함
+
+*대/소 문자 판단
+char ch ='A';
+ch >= 'A' && ch <='Z'  :ch에 저장된 문자가 대문자면 true
+ch >= 'a' && ch <='z'   :ch에 저장된 문자가 소문자면 true
+
+*제어문
+1. 조건문: if, switch
+2. 반복문: for, while, do-while
+
+*if 조건문
+=> 조건식이 참(true)일 때, 명령문 실행
+1. if(조건식) 명령문: 
+2. if(조건식) {		// 기본 모양
+	명령문;
+}
+
+*문자 + 정수 = 정수
+System.out.println의 단축키 : syso + ctrl + space
+
+* if 조건문에 else 명령어를 추가해서 사용하기
+- else: 그 밖에, 그 이외에
+- else는 단독으로 사용못함
+- 삼항연산자를 대체함
+  ((조건식) ? 값1 : 값2 );
+
+1. if(조건식) 명령문; 	//조건식이 true일때 실행
+    else 명령문;		//조건식이 false일때 실행
+2. if(조건식) {		// 기본 모양
+	명령문;
+   }else {
+	명령문;		
+   }
+
+* 4의배수 4 % 4 == 0 // 나머지가 0이면 배수
+* 100의 배수가 아닌것: X % 100 != 0 // 나머지가 0이 아닌 것
+
+* 다중 if-else
+=> if-else 확장:
+=> 용도: 다중 선택
+1. 모양1
+if(조건식) 명령문;
+else if(조건식) 명령문;
+      else if(조건식) 명령문;
+	else 명령문;
+2. 모양2
+if(조건식) 명령문;
+else if(조건식) 명령문;
+else if(조건식) 명령문;
+else 명령문;

@@ -1,0 +1,19 @@
+랜덤함수 공식
+double r = Math.random();
+result = (int)(r*(endNum - startNum +1)+startNum);
+
+<배열>
+*변수들의 집합
+=> 한꺼번에 많은 변수를 만들 때 사용
+=> 반복문을 같이 사용
+=> 포인터는 존재하지만 *a는 사용 불가
+c언어
+=> *a=&b
+Java
+int[ ] a; 		레퍼런스 변수 : 주소를 저장하는 변수(배열 명)
+a = new int[3];
+     1. 변수를 만듦
+     2. 만들어진 변수의 주소를  돌려줌	
+
+int[ ] kor;
+kor = new int[30];

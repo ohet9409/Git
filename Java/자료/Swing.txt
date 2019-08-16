@@ -1,0 +1,36 @@
+import javax.naming.InitialContext;
+import javax.swing.JFrame;
+
+class Swing extends JFrame {
+
+	public Swing() {
+		// JFrame 설정
+		setTitle("Swing");
+		setSize(300, 200);
+		setLocation(1300, 300);
+		
+		init();		// 화면 구성
+		start();		// 이벤트 설정
+		setVisible(true);
+
+	}
+
+	private void init() {
+		
+		
+	}
+
+	private void start() {
+		// x버튼 종료 처리
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+	}
+}
+public class Exam {
+
+	public static void main(String[] args) {
+		Swing swing = new Swing();
+
+	}
+
+}

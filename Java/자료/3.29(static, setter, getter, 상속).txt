@@ -1,0 +1,67 @@
+* static
+=> static이 붙은 변수, 함수, 클래스는 프로그램 시작시, 
+    메모리에 만들어 짐
+
+* static 변수
+=> 모든 객체가 공유하는 변수
+=> 모든 객체가 공유해야 할 변수가 필요할 때 만들어 사용
+=> 클래스안에 위치하지만, 클래스의 멤버가 아님
+=> 사용법 : 클래스명. 변수명
+
+* static 함수
+=> 용도
+1. static 변수 전용 함수
+2. 도우미 클래스
+	=> new 클래스를 만들지 않고, 어떤 기능을 바로 사용하고 싶을 때
+=> 클래스안에 위치하지만, 클래스의 멤버가 아님
+=> 사용법 : 클래스명. 함수명
+
+* 상속 => 2개의 클래스를 결합해서 쓰는 방법
+(목적)
+1.  A is B => 맨 처음 클래스를 만들때 적용 (확장성이 좋아짐)
+2. 수정 => 기존 클래스를 수정하고 싶을 때
+
+class AAA{
+	void ex1( ){
+	}
+	void ex2( ){
+	}
+}
+
+<2개의 클래스 결합 방법>
+1. 멤버변수로 포함시켜서 사용
+class BBB{
+	AAA aa = new AAA();
+}
+BBB bb = new BBB();
+bb.aa.ex1( );	=> 기존 클래스를 수정없이 그대로 사용할 때
+
+2. 상속
+class CCC extends AAA{
+	void ex2( ){
+	}
+	super.ex2( )  -> 부모클래스의 ex2함수를 사용하기 위해(CCC 함수안에서만 사용가능)
+}
+CCC cc = new CCC( );
+cc.ex1( );
+cc.ex2( );	=> 기존 클래스를 수정해서 사용하고 싶을때
+
+* 클래스의 구조
+class AAA {
+	// 멤버변수
+	int num;
+	// 멤버함수 : 1. 기본 멤버함수, 2. 일반 멤버함수
+	// 기본 멤버함수: 생성자, setter, getter
+	AAA() { 	// 생성자 : 멤버변수 초기화
+	}
+	String toString() {		// toString : 모든 멤버변수값 확인
+		return "FileArticle [fileName=" + fileName + "]";
+	}
+	void setNum(int num) {	// setter
+		this.num = num;
+	}
+	int getNum() {		// getter
+		return num;
+	}
+	// 일반 멤버함수: 기본 멤버함수를 제외한 나머지 함수들
+}

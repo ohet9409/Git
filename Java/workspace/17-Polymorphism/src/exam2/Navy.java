@@ -1,0 +1,19 @@
+package exam2;
+
+public class Navy extends Unit{
+
+	public Navy(String name) {
+		super(name);
+	}
+	@Override
+	public void attack() {
+		super.attack();
+		System.out.println(getName() + " >> æÓ∑⁄ πﬂªÁ");
+		System.out.println(getName() + " >> ¡ˆªÛ ªÛ∑˙");
+	}
+	public void nucleus() {
+		System.out.println(getName() + " >> «ŸπÃªÁ¿œ");
+
+	}
+
+}

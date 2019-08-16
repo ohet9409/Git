@@ -1,0 +1,13 @@
+https://programmingsummaries.tistory.com/69
+https://blog.naver.com/pjok1122/221506668908 -- 동기화
+
+* JDBC에서 클래스 이름의 의미
+1. 자바빈즈
+=> 클래스명VO, 클래스명DTO
+	VO: Value Object
+	DTO: Data Transfer Object
+=> 예) SchoolVO 또는 SchoolDTO
+2. JDBC
+=> 클래스명DAO
+	DAO: Data Access Object
+	예) SchoolDAO

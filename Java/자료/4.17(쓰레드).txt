@@ -1,0 +1,35 @@
+* 쓰레드
+=> 독립적으로  동작되는 프로그램 1개를 나타냄
+Thread. run(): 쓰레드로서동작되는 함수
+Thread. start(): run()함수를 스레드로 구동시키는 함수
+1. class AA extends Thread {		--> 다중 상속 불가
+	void run() {
+		독립적으로 동작시킬 코드
+	}
+}
+AA aa = new AA();
+aa.start();
+
+2. class BB implements Runnable{	--> 다중 상속 가능(start()함수가 존재하지 않는다.)
+	void run(){
+		코드
+	}
+}
+BB bb = new BB();
+Thread thread = new Thread(bb);
+thread.start();
+
+3. Thread thread = new Thread(){	-> 무명클래스(상속의 약식 사용법) -- 딱 한번만 사용하고 싶을때
+	void run(){
+		코드
+	}
+	
+};
+thread. start();
+* 어떤 클래스를 상속받아서 사용하는 방법
+1. 상속
+2. 무명클래스 (= 상속의 약식표현)
+
+* Port : 프로그램마다 부여된 주소(0~6만)
+220. x. x. x : Port번호(80은 생략 가능)
+아이피주소 : Port번호

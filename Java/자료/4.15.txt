@@ -1,0 +1,5 @@
+Container container = getContentPane();   // ContentPane에 프레임 만듬
+container.add(radioButtonbutton1);	// 화면에 버튼 추가
+// x버튼 종료 처리
+this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+radioButtonbutton1.addActionListener(this);		// 버튼의 액션 추가
